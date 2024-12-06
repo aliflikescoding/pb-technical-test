@@ -22,7 +22,7 @@
   --shadow: 
 }
 
-/* inputs */
+/* input component */
 .input-parent {
   display: flex;
   justify-items: start;
@@ -70,4 +70,19 @@
   color: red;
   margin-top: 5px;
   font-size: 0.9rem;
+}
+
+/* root styles */
+
+/* input root fields */
+.input-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 7.5px;
+}
+
+@media (min-width: 768px) {
+  .input-fields {
+    grid-template-columns: repeat(2, 1fr); /* For medium screens (2 columns) */
+  }
 }
