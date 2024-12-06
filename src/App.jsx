@@ -205,118 +205,118 @@ function App() {
   return (
     <>
       <div>
-        <p className="text-logo">
-          <FaBox/>
-          Purple Box
-        </p>
-        <p className="text-make">Make your account now.</p>
-        <p className="text-make-small">
-          Welcome back your user now. fill in your information bellow.
-        </p>
-      </div>
-      <div>
-      <div className="social-container">
-        <div className="social-button">
-          <img src="./google.png" alt="google image"/>
-          Google
+        <div>
+          <p className="text-logo">
+            <FaBox />
+            Purple Box
+          </p>
+          <p className="text-make">Make your account now.</p>
+          <p className="text-make-small">
+            Welcome back your user now. fill in your information bellow.
+          </p>
         </div>
-        <div className="social-button">
-          <img src="./facebook-logo.png" alt="google image"/>
-          Facebook
+        <div>
+          <div className="social-container">
+            <div className="social-button">
+              <img src="./google.png" alt="google image" />
+              Google
+            </div>
+            <div className="social-button">
+              <img src="./facebook-logo.png" alt="google image" />
+              Facebook
+            </div>
+          </div>
         </div>
-      </div>
-      </div>
-      <div>
-        <div className="text-container">
-          <hr className="line" />
-          <span className="text">Make your user</span>
-          <hr className="line" />
+        <div>
+          <div className="text-container">
+            <hr className="line" />
+            <span className="text">Make your user</span>
+            <hr className="line" />
+          </div>
         </div>
-      </div>
-      <form onSubmit={handleSubmit}>
-        <div className="input-fields">
-          <Input
-            label="Username"
-            name="username"
-            value={formState.username.value}
-            onChange={handleInputUsernameChange}
-            validate={validateUsername}
-            required
-            placeholder="John Doe"
-            minLength={3}
-            maxLength={20}
-            errorMessage={formState.username.error}
-          />
-          <Input
-            label="Email"
-            name="email"
-            type="email"
-            value={formState.email.value}
-            onChange={handleInputEmailChange}
-            validate={validateEmail}
-            required
-            placeholder="johndoe@gmail.com"
-            minLength={3}
-            maxLength={20}
-            errorMessage={formState.email.error}
-          />
-          <Input
-            label="First Name"
-            name="firstName"
-            value={formState.firstName.value}
-            onChange={handleFirstNameChange}
-            validate={validateFirstName}
-            required
-            placeholder="John"
-            minLength={3}
-            maxLength={20}
-            errorMessage={formState.firstName.error}
-          />
-          <Input
-            label="Last Name"
-            name="lastName"
-            value={formState.lastName.value}
-            onChange={handleLastNameChange}
-            validate={validateLastName}
-            required
-            placeholder="Doe"
-            minLength={3}
-            maxLength={20}
-            errorMessage={formState.lastName.error}
-          />
-          <Input
-            label="Age"
-            name="age"
-            value={formState.age.value}
-            onChange={handleAgeChange}
-            validate={validateAge}
-            required
-            placeholder="24"
-            errorMessage={formState.age.error}
-          />
-          <Input
-            label="Hobby"
-            name="hobby"
-            value={formState.hobby.value}
-            onChange={handleHobby}
-            validate={validateHobby}
-            placeholder="Coding"
-            errorMessage={formState.hobby.error}
-          />
+        <form onSubmit={handleSubmit}>
+          <div className="input-fields">
+            <Input
+              label="Username"
+              name="username"
+              value={formState.username.value}
+              onChange={handleInputUsernameChange}
+              validate={validateUsername}
+              required
+              placeholder="John Doe"
+              minLength={3}
+              maxLength={20}
+              errorMessage={formState.username.error}
+            />
+            <Input
+              label="Email"
+              name="email"
+              type="email"
+              value={formState.email.value}
+              onChange={handleInputEmailChange}
+              validate={validateEmail}
+              required
+              placeholder="johndoe@gmail.com"
+              minLength={3}
+              maxLength={20}
+              errorMessage={formState.email.error}
+            />
+            <Input
+              label="First Name"
+              name="firstName"
+              value={formState.firstName.value}
+              onChange={handleFirstNameChange}
+              validate={validateFirstName}
+              required
+              placeholder="John"
+              minLength={3}
+              maxLength={20}
+              errorMessage={formState.firstName.error}
+            />
+            <Input
+              label="Last Name"
+              name="lastName"
+              value={formState.lastName.value}
+              onChange={handleLastNameChange}
+              validate={validateLastName}
+              required
+              placeholder="Doe"
+              minLength={3}
+              maxLength={20}
+              errorMessage={formState.lastName.error}
+            />
+            <Input
+              label="Age"
+              name="age"
+              value={formState.age.value}
+              onChange={handleAgeChange}
+              validate={validateAge}
+              required
+              placeholder="24"
+              errorMessage={formState.age.error}
+            />
+            <Input
+              label="Hobby"
+              name="hobby"
+              value={formState.hobby.value}
+              onChange={handleHobby}
+              validate={validateHobby}
+              placeholder="Coding"
+              errorMessage={formState.hobby.error}
+            />
+          </div>
+          <div className="button-parent">
+            <button className="button button-primary" type="submit">
+              Make User
+            </button>
+          </div>
+        </form>
+        <div>
+          <p>
+            Don&apos;t have a user?{" "}
+            <a style={{ color: "var(--primary)" }}>Make one now!</a>
+          </p>
         </div>
-        <div className="button-parent">
-          <button className="button button-primary" type="submit">
-            Make User
-          </button>
-        </div>
-      </form>
-      <div>
-        <p>
-          Don&apos;t have a user?{" "}
-          <a href="#" style={{ color: "var(--primary)" }}>
-            Make one now!
-          </a>
-        </p>
       </div>
     </>
   );

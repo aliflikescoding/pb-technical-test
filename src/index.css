@@ -20,7 +20,7 @@
   --border: #f1f3f8;
   --background: #ffff;
   --foreground: #fafbfe;
-  --shadow: 
+  --shadow: ;
 }
 
 /* input component */
@@ -104,12 +104,14 @@
 .input-fields {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 7.5px;
+  gap: 10px;
+  margin-bottom: 35px;
 }
 
 @media (min-width: 768px) {
   .input-fields {
-    grid-template-columns: repeat(2, 1fr); /* For medium screens (2 columns) */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px 10px;
   }
 }
 
@@ -150,7 +152,7 @@
   margin: 45px 0;
   display: flex;
   align-items: center;
-  gap:7.5px;
+  gap: 7.5px;
   color: var(--primary);
 }
 
@@ -168,7 +170,14 @@
 
 .social-container {
   display: flex;
-  gap: 15px;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .social-container {
+    flex-direction: row;
+    gap: 15px;
+  }
 }
 
 .social-container > * {
@@ -176,7 +185,7 @@
 }
 
 .social-button {
-  margin-top: 45px;
+  margin-top: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,6 +200,12 @@
   -moz-box-shadow: 1px 1px 3px 0.5px var(--border);
   cursor: pointer;
   transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .social-button {
+    margin-top: 45px;
+  }
 }
 
 .social-button:hover {
