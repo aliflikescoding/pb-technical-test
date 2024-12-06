@@ -287,3 +287,55 @@
   width: 20px;
   height: 20px;
 }
+
+/* animations */
+.slide-up-animation {
+  animation: slideUp 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.scroll-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-content {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+}
+
+.scroll-content > * {
+  margin-right: 20px; /* Adds space between items */
+}
+
+/* For seamless infinite scroll */
+.scroll-content {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
+}
+
+.scroll-content > div {
+  flex-shrink: 0; /* Prevents content from shrinking */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 10px)); /* Adjust based on your content */
+  }
+}
