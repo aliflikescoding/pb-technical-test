@@ -15,7 +15,6 @@ const Input = ({
   ...rest
 }) => {
   const [uncontrolledValue, setUncontrolledValue] = useState("");
-
   const [error, setError] = useState("");
 
   const isControlled = controlledValue !== undefined;
@@ -32,17 +31,11 @@ const Input = ({
 
     if (required && !inputValue.trim()) {
       validationError = "This field is required.";
-    }
-
-    if (minLength && inputValue.length < minLength) {
+    } else if (minLength && inputValue.length < minLength && inputValue.length > 0) {
       validationError = `Minimum length is ${minLength} characters.`;
-    }
-
-    if (maxLength && inputValue.length > maxLength) {
+    } else if (maxLength && inputValue.length > maxLength) {
       validationError = `Maximum length is ${maxLength} characters.`;
-    }
-
-    if (validate && !validationError) {
+    } else if (validate) {
       const customError = validate(inputValue);
       if (customError) {
         validationError = customError;
@@ -84,7 +77,6 @@ const Input = ({
   );
 };
 
-// PropTypes for type checking
 Input.propTypes = {
   type: PropTypes.oneOf([
     "text",

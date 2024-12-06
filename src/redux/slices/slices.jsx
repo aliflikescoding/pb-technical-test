@@ -6,6 +6,26 @@ const initialState = {
     value: '',
     error: '',
   },
+  email: {
+    value: '',
+    error: '',
+  },
+  firstName: {
+    value: '',
+    error: '',
+  },
+  lastName: {
+    value: '',
+    error: '',
+  },
+  age: {
+    value: '',
+    error: ''
+  },
+  hobby: {
+    value: '',
+    error: ''
+  },
   // You can easily extend this for more form fields
 };
 
