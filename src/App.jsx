@@ -203,6 +203,13 @@ function App() {
 
   return (
     <>
+      <div>
+        <div className="text-container">
+          <hr className="line" />
+          <span className="text">Make your user</span>
+          <hr className="line" />
+        </div>
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="input-fields">
           <Input
@@ -276,7 +283,7 @@ function App() {
         </div>
         <div className="button-parent">
           <button className="button button-primary" type="submit">
-            Submit Form
+            Make User
           </button>
         </div>
       </form>

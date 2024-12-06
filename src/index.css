@@ -98,7 +98,7 @@
   background-color: var(--primary-hover);
 }
 
-/* root styles */
+/* app styles */
 
 /* input root fields */
 .input-fields {
@@ -121,4 +121,24 @@
 
 .button-parent > * {
   width: 100%;
+}
+
+.text-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 45px 0;
+  width: 100%;
+}
+
+.line {
+  border: 0;
+  border-top: 1px solid #dcdcdc;
+  flex-grow: 1;
+  margin: 0 10px;
+}
+
+.text {
+  font-size: 14px;
+  color: #6e6e6e;
 }
