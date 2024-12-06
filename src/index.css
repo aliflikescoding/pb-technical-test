@@ -7,3 +7,40 @@
   margin: 0;
   padding: 0;
 }
+
+/* inputs */
+.input-parent {
+  display: flex;
+  justify-items: center;
+  align-items: start;
+  flex-direction: column;
+}
+
+.input-label {
+  color: black;
+  font-size: 1rem;
+}
+
+.input {
+  border: 1px solid #888;
+  padding: 2.5px 7.5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input::placeholder {
+  color: #888;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #0ff;
+  box-shadow: 0 0 3px #0ff;
+}
+
+.input-error {
+  color: red;
+  margin-top: 5px;
+  font-size: 0.9rem;
+}
