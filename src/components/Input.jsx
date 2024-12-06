@@ -48,16 +48,14 @@ const Input = ({
         validationError = customError;
       }
     }
-    
+
     setError(validationError);
 
-    // Call onChange prop if provided
     if (onChange) {
       onChange(e, validationError);
     }
   };
 
-  // Optional reset method (can be exposed via ref)
   const reset = () => {
     if (!isControlled) {
       setUncontrolledValue("");

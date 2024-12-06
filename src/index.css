@@ -8,6 +8,12 @@
   padding: 0;
 }
 
+:root {
+  --primary: #5120c0;
+  --text: #54545a;
+  --text-less: #888;
+}
+
 /* inputs */
 .input-parent {
   display: flex;
@@ -17,12 +23,12 @@
 }
 
 .input-label {
-  color: black;
+  color: var(--text);
   font-size: 1rem;
 }
 
 .input {
-  border: 1px solid #888;
+  border: 1.5px solid var(--text-less);
   padding: 2.5px 7.5px;
   border-radius: 5px;
   font-size: 1rem;
@@ -30,13 +36,13 @@
 }
 
 .input::placeholder {
-  color: #888;
+  color: var(--text-less);
 }
 
 .input:focus {
-  outline: none;
-  border-color: #0ff;
-  box-shadow: 0 0 3px #0ff;
+  outline: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 0 0 3px var(--primary);
 }
 
 .input-error {
