@@ -142,3 +142,62 @@
   font-size: 14px;
   color: #6e6e6e;
 }
+
+.text-logo {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 45px 0;
+  display: flex;
+  align-items: center;
+  gap:7.5px;
+  color: var(--primary);
+}
+
+.text-make {
+  text-align: left;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.text-make-small {
+  max-width: 350px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.social-container {
+  display: flex;
+  gap: 15px;
+}
+
+.social-container > * {
+  width: 100%;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text);
+  gap: 7.5px;
+  font-size: 1.25rem;
+  padding: 10px 60px;
+  border: 2px solid var(--border);
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px 0.5px var(--border);
+  -webkit-box-shadow: 1px 1px 3px 0.5px var(--border);
+  -moz-box-shadow: 1px 1px 3px 0.5px var(--border);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.social-button:hover {
+  background-color: var(--foreground);
+  transform: scale(0.98);
+}
+
+.social-button > img {
+  width: 20px;
+  height: 20px;
+}

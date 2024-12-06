@@ -2,7 +2,8 @@ import "./App.css";
 import Input from "./components/Input";
 import { useSelector, useDispatch } from "react-redux";
 import store from "./redux/store";
-import { updateField } from "./redux/slices/slices"; // adjust path as needed
+import { updateField } from "./redux/slices/slices";
+import { FaBox } from "react-icons/fa";
 
 function App() {
   const dispatch = useDispatch();
@@ -204,6 +205,28 @@ function App() {
   return (
     <>
       <div>
+        <p className="text-logo">
+          <FaBox/>
+          Purple Box
+        </p>
+        <p className="text-make">Make your account now.</p>
+        <p className="text-make-small">
+          Welcome back your user now. fill in your information bellow.
+        </p>
+      </div>
+      <div>
+      <div className="social-container">
+        <div className="social-button">
+          <img src="./google.png" alt="google image"/>
+          Google
+        </div>
+        <div className="social-button">
+          <img src="./facebook-logo.png" alt="google image"/>
+          Facebook
+        </div>
+      </div>
+      </div>
+      <div>
         <div className="text-container">
           <hr className="line" />
           <span className="text">Make your user</span>
@@ -287,6 +310,14 @@ function App() {
           </button>
         </div>
       </form>
+      <div>
+        <p>
+          Don&apos;t have a user?{" "}
+          <a href="#" style={{ color: "var(--primary)" }}>
+            Make one now!
+          </a>
+        </p>
+      </div>
     </>
   );
 }
