@@ -13,7 +13,8 @@
 }
 
 :root {
-  --primary: #5120c0;
+  --primary: #7134ff;
+  --primary-hover: #5120c0;
   --text: #54545a;
   --text-less: #b1b1b1;
   --border: #f1f3f8;
@@ -41,6 +42,7 @@
 
 .input-label {
   color: var(--text);
+  font-weight: bold;
   font-size: 1rem;
 }
 
@@ -72,6 +74,30 @@
   font-size: 0.9rem;
 }
 
+/* button styles */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  user-select: none;
+}
+
+.button-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.button-primary:hover {
+  background-color: var(--primary-hover);
+}
+
 /* root styles */
 
 /* input root fields */
@@ -85,4 +111,14 @@
   .input-fields {
     grid-template-columns: repeat(2, 1fr); /* For medium screens (2 columns) */
   }
+}
+
+.button-parent {
+  display: flex;
+  margin: 15px 0;
+  width: 100%;
+}
+
+.button-parent > * {
+  width: 100%;
 }

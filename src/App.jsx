@@ -127,10 +127,9 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    console.log('Complete Redux Form State:', formState);
-  };
 
+    console.log("Complete Redux Form State:", formState);
+  };
 
   const validateHobby = (value) => {
     if (!value) return "";
@@ -220,7 +219,11 @@ function App() {
             errorMessage={formState.hobby.error}
           />
         </div>
-        <button type="submit">Submit Form</button>
+        <div className="button-parent">
+          <button className="button button-primary" type="submit">
+            Submit Form
+          </button>
+        </div>
       </form>
     </>
   );
