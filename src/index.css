@@ -176,6 +176,7 @@
 }
 
 .social-button {
+  margin-top: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
