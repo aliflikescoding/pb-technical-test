@@ -128,6 +128,61 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    const errors = {};
+
+    if (!formState.username.value.trim()) {
+      errors.username = "Username is required";
+    } else {
+      const usernameError = validateUsername(formState.username.value);
+      if (usernameError) errors.username = usernameError;
+    }
+
+    if (!formState.email.value.trim()) {
+      errors.email = "Email is required";
+    } else {
+      const emailError = validateEmail(formState.email.value);
+      if (emailError) errors.email = emailError;
+    }
+
+    if (!formState.firstName.value.trim()) {
+      errors.firstName = "First name is required";
+    } else {
+      const firstNameError = validateFirstName(formState.firstName.value);
+      if (firstNameError) errors.firstName = firstNameError;
+    }
+
+    if (!formState.lastName.value.trim()) {
+      errors.lastName = "Last name is required";
+    } else {
+      const lastNameError = validateLastName(formState.lastName.value);
+      if (lastNameError) errors.lastName = lastNameError;
+    }
+
+    if (!formState.age.value.trim()) {
+      errors.age = "Age is required";
+    } else {
+      const ageError = validateAge(formState.age.value);
+      if (ageError) errors.age = ageError;
+    }
+
+    if (formState.hobby.value.trim()) {
+      const hobbyError = validateHobby(formState.hobby.value);
+      if (hobbyError) errors.hobby = hobbyError;
+    }
+
+    if (Object.keys(errors).length > 0) {
+      Object.keys(errors).forEach((field) => {
+        dispatch(
+          updateField({
+            field,
+            value: formState[field].value,
+            error: errors[field],
+          })
+        );
+      });
+      return;
+    }
+
     console.log("Complete Redux Form State:", formState);
   };
 
