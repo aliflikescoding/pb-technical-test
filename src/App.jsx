@@ -6,12 +6,7 @@ import { updateField } from "./redux/slices/slices"; // adjust path as needed
 
 function App() {
   const dispatch = useDispatch();
-  const usernameState = useSelector((state) => state.form.username);
-  const emailState = useSelector((state) => state.form.email);
-  const firstNameState = useSelector((state) => state.form.firstName);
-  const lastNameState = useSelector((state) => state.form.lastName);
-  const ageState = useSelector((state) => state.form.age);
-  const hobbyState = useSelector((state) => state.form.hobby);
+  const formState = useSelector((state) => state.form);
 
   /* handle input changes */
   const handleInputUsernameChange = (e, error) => {
@@ -130,95 +125,102 @@ function App() {
     return "";
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    console.log('Complete Redux Form State:', formState);
+  };
+
+
   const validateHobby = (value) => {
     if (!value) return "";
-  
+
     const regex = /[^a-zA-Z\s]/;
-  
+
     if (value.length > 10) {
       return "Hobby must be maximum 10 characters long.";
     }
-  
+
     if (regex.test(value)) {
       return "Hobby cannot contain numbers or special characters.";
     }
     return "";
   };
-  
 
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="input-fields">
           <Input
             label="Username"
             name="username"
-            value={usernameState.value}
+            value={formState.username.value}
             onChange={handleInputUsernameChange}
             validate={validateUsername}
             required
             placeholder="John Doe"
             minLength={3}
             maxLength={20}
-            errorMessage={usernameState.error}
+            errorMessage={formState.username.error}
           />
           <Input
             label="Email"
             name="email"
             type="email"
-            value={emailState.value}
+            value={formState.email.value}
             onChange={handleInputEmailChange}
             validate={validateEmail}
             required
             placeholder="johndoe@gmail.com"
             minLength={3}
             maxLength={20}
-            errorMessage={emailState.error}
+            errorMessage={formState.email.error}
           />
           <Input
             label="First Name"
             name="firstName"
-            value={firstNameState.value}
+            value={formState.firstName.value}
             onChange={handleFirstNameChange}
             validate={validateFirstName}
             required
             placeholder="John"
             minLength={3}
             maxLength={20}
-            errorMessage={firstNameState.error}
+            errorMessage={formState.firstName.error}
           />
           <Input
             label="Last Name"
             name="lastName"
-            value={lastNameState.value}
+            value={formState.lastName.value}
             onChange={handleLastNameChange}
             validate={validateLastName}
             required
             placeholder="Doe"
             minLength={3}
             maxLength={20}
-            errorMessage={lastNameState.error}
+            errorMessage={formState.lastName.error}
           />
           <Input
             label="Age"
             name="age"
-            value={ageState.value}
+            value={formState.age.value}
             onChange={handleAgeChange}
             validate={validateAge}
             required
             placeholder="24"
-            errorMessage={ageState.error}
+            errorMessage={formState.age.error}
           />
           <Input
             label="Hobby"
             name="hobby"
-            value={hobbyState.value}
+            value={formState.hobby.value}
             onChange={handleHobby}
             validate={validateHobby}
             placeholder="Coding"
-            errorMessage={hobbyState.error}
+            errorMessage={formState.hobby.error}
           />
         </div>
+        <button type="submit">Submit Form</button>
       </form>
     </>
   );
