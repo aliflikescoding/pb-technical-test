@@ -2,6 +2,10 @@
 
 A responsive React form application with seamless validation and dynamic styling using both CSS and Tailwind.
 
+## Output
+
+Visit [The Live Page](https://pb-technical-test.vercel.app/) to view the details
+
 ## 🚀 Features
 
 - Custom form validation for all input fields
