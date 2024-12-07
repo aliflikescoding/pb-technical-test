@@ -1,6 +1,67 @@
-# React - Purple Box Form
+# Purple Box - User Registration Form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React form application with seamless validation and dynamic styling using both CSS and Tailwind.
+
+## 🚀 Features
+
+- Custom form validation for all input fields
+- Responsive design across all devices
+- Redux state management
+- Dual styling approach (CSS + Tailwind)
+- Animated success page
+- Social login options (UI only)
+
+## 💻 Desktop Version SVG
+
+The desktop version features a custom SVG illustration that adapts to different screen sizes:
+
+1. Created using a vector graphics editor
+2. Saved as an optimized SVG file
+3. Placed in the public folder as `user-svg.svg`
+4. Implemented responsively using CSS media queries
+5. Auto-scales while maintaining aspect ratio
+
+## 🎨 Styling Architecture
+
+### Pre-submission Form (Plain CSS)
+- Used traditional CSS for the initial form layout
+- Implemented a two-column layout using CSS Grid
+- Custom styling for form inputs and validation states
+- Responsive breakpoints for different screen sizes
+- CSS variables for consistent theming
+
+### Post-submission Display (Tailwind)
+- Switched to Tailwind CSS for the success page
+- Utilized Tailwind's utility classes for quick styling
+- Implemented animated scroll containers
+- Responsive text sizing and spacing
+- Flexible container layouts
+
+## ✅ Form Validation
+
+Frontend validation includes:
+
+- Username: Letters, numbers, underscore, and hyphen only
+- Email: Must contain @ and .com
+- First/Last Name: Letters only
+- Age: Number between 1-100
+- Hobby: Optional, max 10 characters, letters only
+
+Validation features:
+- Real-time error messages
+- Input field highlighting
+- Submit button state management
+- Redux store updates
+
+# 📱 Responsive Design Guide
+
+Breakpoints:
+- Mobile: < 768px
+- Tablet: 768px - 1024px
+- Desktop: > 1024px
+- Fluid typography
+- Flexible layouts
+- Conditional rendering for different screen sizes
 
 ## Reusable Input Component
 
